@@ -4,6 +4,7 @@ module.exports = function check(str, bracketsConfig) {
   let halfLength = Math.floor(brackets.length/2);
   for(let j=0; j<halfLength; j++){
     for(let i=0; i<bracketsConfig.length; i++){
+      // преобразовываем пару скобок каждого элемента в строку для поиска в строке str
       let pairOfBrackets = bracketsConfig[i].join('');
       // спиок преобразуем в строку и находим центральные парные скопки
       let index = brackets.join('').indexOf(pairOfBrackets); 
